@@ -10,13 +10,6 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 // /fix
 
-// Fix for ReferenceError: __dirname is not defined in ES module scope
-// https://github.com/nodejs/help/issues/2907
-// import { fileURLToPath } from 'url';
-// const __filename = fileURLToPath(import.meta.url);
-// const __dirname = path.dirname(__filename);
-// /fix
-
 const app = express();
 const PORT = process.env.PORT || 3002;
 
