@@ -3,6 +3,11 @@ import express from 'express';
 
 import { router as routes } from './routes/index.mjs';
 
+// import path from 'path';
+// import express from 'express';
+
+// import { router as routes } from './routes/index.mjs';
+
 // Fix for ReferenceError: __dirname is not defined in ES module scope
 // https://github.com/nodejs/help/issues/2907
 import { fileURLToPath } from 'url';
