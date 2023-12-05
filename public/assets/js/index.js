@@ -57,9 +57,9 @@ const renderActiveNote = () => {
   hide(saveNoteBtn);
   hide(clearBtn);
 
+  // check if activeNote is null (no notes exist in db) before checking its .id property
   if (!!activeNote && activeNote.id) {
-//  if (!!activeNote && activeNote.id) {
-      show(newNoteBtn);
+    show(newNoteBtn);
     noteTitle.setAttribute('readonly', true);
     noteText.setAttribute('readonly', true);
     noteTitle.value = activeNote.title;
@@ -154,10 +154,8 @@ const renderNoteList = async (notes) => {
       const delBtnEl = document.createElement('i');
       delBtnEl.classList.add(
         'fas',
-        'btn',
-        'btn-light',
-        // 'btn',
-        // 'btn-light',
+        'btn',        // Added for hover effect
+        'btn-light',  //
         'fa-trash-alt',
         'float-right',
         'text-danger',
