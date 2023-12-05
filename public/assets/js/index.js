@@ -58,7 +58,8 @@ const renderActiveNote = () => {
   hide(clearBtn);
 
   if (!!activeNote && activeNote.id) {
-    show(newNoteBtn);
+//  if (!!activeNote && activeNote.id) {
+      show(newNoteBtn);
     noteTitle.setAttribute('readonly', true);
     noteText.setAttribute('readonly', true);
     noteTitle.value = activeNote.title;
@@ -155,6 +156,8 @@ const renderNoteList = async (notes) => {
         'fas',
         'btn',
         'btn-light',
+        // 'btn',
+        // 'btn-light',
         'fa-trash-alt',
         'float-right',
         'text-danger',
