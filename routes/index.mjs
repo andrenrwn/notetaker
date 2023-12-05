@@ -1,9 +1,9 @@
 // / routes. Delegates /api/* and /* routes to /api/index.mjs and /defaultroutes.mjs
 import express from 'express';
 
+// note due to conversion to ES6 module format, we need to use aliases to import router exports, ie. apiRoutes and defaultRoutes.
 import { router as apiRoutes } from './api/index.mjs';
 import { router as defaultRoutes } from './defaultroutes.mjs';
-import diagnostics from './diagnostics.mjs';
 
 export const router = express.Router();
 
@@ -17,6 +17,5 @@ router.use(function (req, res, next) {
 
 router.use('/api', apiRoutes);
 router.use('/', defaultRoutes);
-router.use('/diag', diagnostics);
 
 

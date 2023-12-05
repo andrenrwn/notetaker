@@ -1,6 +1,6 @@
 // File data utility script from UT Austin coding boot camp materials
 // https://static.fullstack-bootcamp.com/lesson-files/11-Express/26-Stu_Heroku.zip
-// Converted to ES6 export format
+// Modified and converted to be an ES6 module (to use export / import instead of require)
 
 import fs from 'fs';
 import util from 'util';
