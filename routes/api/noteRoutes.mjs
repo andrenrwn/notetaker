@@ -1,3 +1,9 @@
+// /api/* routes.  Called from / exported to /routes/api/index.mjs.
+
+// GET /api/notes - returns all note objects from a file dbFile
+// POST /api/notes - saves a note submitted in the POST request body
+// DELETE /api/notes/{note ID} - deletes a note identified by note ID
+
 import { readFromFile, writeToFile } from '../../helpers/fsUtils.mjs';
 import { nanoid } from 'nanoid';
 

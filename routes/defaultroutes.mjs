@@ -1,3 +1,4 @@
+// /notes routes.  Used by routes/index.mjs.
 import path from 'path';
 import express from 'express';
 
@@ -15,4 +16,3 @@ router.get('/notes', async (req, res) => {
     console.log("NOTES PAGE: ", path.join(__dirname, '../public/notes.html'));
     res.sendFile(path.join(__dirname, '../public/notes.html'));
 });
-
